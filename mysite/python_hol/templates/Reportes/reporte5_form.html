@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<div style="text-align:center;">
+<h1>REPORTE DE MENSAJES DE CIERTO ANIO</h1>
+<p>Selecciona el Anio</p>
+<form action="/metodo_Reporte5/" method="get">{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Generar Reporte5</button>
+</div>
+</script>
+</body>
+</html>

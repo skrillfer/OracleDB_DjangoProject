@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Principal</title>
+</head>
+<body bgcolor="#3CB371">
+
+<h3 align="center" style="color:#EE7621" >______________________________________________________________________________</h3>
+<h3 align="center" >CARGA MASIVA DE DATOS</h3>
+
+		    <form align="center" action="/upload_file/"  enctype="multipart/form-data" method="post" >{% csrf_token %}{{ form.as_p }}
+		        <input type="submit" value="CARGAR DATOS"/>
+		    </form>
+
+
+<h3 align="center" style="color:#EE7621" >______________________________________________________________________________</h3>
+<h3 align="center" style="color:BLUE" >ALTAS, BAJAS Y CAMBIOS DE CLIENTES, PLANES TELEFONICOS  Y SERVICIOS DE CLIENTE</h3>
+                   <h4  align="center"> <a href="/listarReportes/" name = "listarR" style="color:BLACK; border: 2px solid #07c;padding: 2px 5px;" method="get">REPORTES ADMINISTRADOR</a></h4>
+		   
+<h3 align="center" style="color:#EE7621" >______________________________________________________________________________</h3>
+<br>
+		    <form align="center" action="/clientes/" method="get">
+		        <input type="submit" style="color:BLACK; border: 2px solid #07c;padding: 2px 5px;" value="ABC CLIENTES"/>
+		    </form>
+<h3 align="center" style="color:#EE7621" >______________________________________________________________________________</h3>
+		    <form align="center"  action="/listacliente_plan/" method="get">
+		        <input type="submit"  style="color:BLACK; border: 2px solid #07c;padding: 2px 5px;" value="ABC PLANES TELEFONICO"/>
+		    </form>
+<h3 align="center" style="color:#EE7621" >______________________________________________________________________________</h3>
+		    <form align="center"  action="/listacliente_servicio/" method="get">
+		        <input type="submit"  style="color:BLACK; border: 2px solid #07c;padding: 2px 5px;" value="ABC SERVICIOS CLIENTE"/>
+		    </form>
+
+
+
+
+</body>
+</html>

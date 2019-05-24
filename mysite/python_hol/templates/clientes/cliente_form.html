@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<div style="text-align:center;">
+<h1>Crear Cliente</h1>
+<p>Use este form para gestionar sus clientes.</p>
+<form action="/create_save_cliente/" method="get">{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Save</button>
+</div>
+</script>
+</body>
+</html>

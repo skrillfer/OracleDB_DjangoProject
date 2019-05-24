@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>LOGIN ADMIN</title>
+</head>
+<body bgcolor="#3CB371">
+<h3 align="center" style="color:#EE7621" >______________________________________________________________________________</h3>
+<h3 align="center" >BIENVENIDO AL SISTEMA DE GESTION Y ADMINISTRACION DE DATOS [ADMINISTRADOR]</h3>
+
+<h3 align="center">PARA UTILIZAR EL SISTEMA DEBE INICIAR SESION O REGISTRARSE SI NO TIENE UNA CUENTA</h3>
+<h3 align="center" style="color:#EE7621" >______________________________________________________________________________</h3>
+
+<br>
+ <form align="center" action="/loginAdmin/" method="get">{% csrf_token %}{{ form.as_p }}
+		        <input type="submit" style="color: #07c; border: 2px solid #07c;padding: 2px 5px;" value="INICIAR SESION"/>
+ </form>
+<br>
+<p align="center"><a href="/registroAdmin/">REGISTRARSE ADMIN</a></p>
+<h3 align="center" style="color:#EE7621" >______________________________________________________________________________</h3>
+<p align="center"><a href="/login/">REGRESAR A LOGIN USUARIO</a></p>
+</body>
+</html>

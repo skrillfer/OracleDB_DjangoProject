@@ -1,0 +1,32 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ STATIC_URL }}style.css">
+</head>
+<body bgcolor="#3CB371">
+<div id="content" style="text-align:center;">
+<h1><a href="/create_save_cliente/" class="addlink">Agregar Un Nuevo Cliente</a></h1>
+{% if object_list %}
+<table id="cliente_list_table" style="margin: 0 auto;" style="width:100%" frame="hsides" rules="cols">
+<tr bgcolor="#0000FF">
+<th>Nombre Completo</th>
+<th>Nit</th>
+<th>Direccion</th>
+<th>Fecha Nacimiento</th>
+<th>Action</th>
+</tr>
+{% for cliente in object_list %}
+<tr bgcolor="#CDBE70">
+<td><a href="/update_save_cliente/{{cliente.idcliente}}" name = "{{cliente.idcliente}}" method="get">{{ cliente.nombre }}</a></td>
+<td>{{ cliente.nit }}</td>
+<td>{{ cliente.direccion }}</td>
+<td>{{ cliente.fecha_nacimiento }}</td>
+<td><a href="/delete_save_cliente/{{ cliente.idcliente }}/">Eliminar</a></td>
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<p>No clientess found.</p>
+{% endif %}
+</div>
+</body>
+</html>

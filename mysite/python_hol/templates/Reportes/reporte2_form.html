@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<div style="text-align:center;">
+<h1>REPORTE DE LLAMADAS DE CIERTO CLIENTE</h1>
+<p>Selecciona el cliente</p>
+<form action="/metodo_Reporte2/" method="get">{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Generar Reporte2</button>
+</div>
+</script>
+</body>
+</html>

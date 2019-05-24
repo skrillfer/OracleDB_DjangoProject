@@ -1,0 +1,33 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ STATIC_URL }}style.css">
+</head>
+<body bgcolor="#3CB371">
+<div id="content" style="text-align:center;">
+<h1><a href="/create_save_cliente_servicio/" class="addlink">Agregar Un Nuevo Servicio A Cliente</a></h1>
+
+<table id="cliente_list_table" style="margin: 0 auto;" style="width:100%" frame="hsides" rules="cols">
+<tr bgcolor="#0000FF">
+<th>Id Servicio_Cliente</th>
+<th>Id Cliente</th>
+<th>Id Servicio</th>
+<th>Fecha Contrato</th>
+<th>Action</th>
+</tr>
+
+<tr bgcolor="#CDBE70">
+<td><a href="/update_save_cliente_servicio/{{pl.idclienteservicio}}" name = "{{ pl.idclienteservicio }}" method="get">{{ pl.idclienteservicio }}</a></td>
+<td><a href="/vercliente/{{pl.idcliente}}" name = "{{ pl.idcliente }}" method="get">{{ pl.idcliente }}</a></td>
+<td><a href="/verservicio/{{pl.idservicio}}" name = "{{ pl.idservicio }}" method="get">{{ pl.idservicio }}</a></td>
+<td>{{ pl }}</td>
+<td><a href="/delete_save_cliente_servicio/{{ pl.idclienteservicio }}/">Eliminar</a></td>
+</tr>
+
+
+</table>
+{% else %}
+<p>No cliente_servicio found.</p>
+{% endif %}
+</div>
+</body>
+</html>

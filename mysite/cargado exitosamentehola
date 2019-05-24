@@ -1,0 +1,23 @@
+instalamos dependencias necesarias:
+
+	sudo apt-get install python-dev python-setuptools build-essential
+
+Para evitarnos tambien el: libaio.so.1: cannot open shared object file: No such file or directory a la hora de ejecutar cx_Oracle
+instalamos tambien la siguiente dependencia:
+
+	apt-get install libaio-dev
+
+y ahora si, ya podemos compilarlo (para ello nos descargamos y compilamos los fuentes con pip):
+
+	sudo apt-get install python-pip
+	pip install cx_Oracle
+
+si todo es correcto podemos probar a importarlo desde python para comprobar que funciona:
+
+Escribimos en la consola de Comandos:
+ python
+ import cx_Oracle
+ exit()
+
+Para Mayor informacion ir a:
+https://ubuntulife.wordpress.com/2011/10/02/conectar-a-oracle-desde-python-incluye-compilacion-de-cx_oracle/
